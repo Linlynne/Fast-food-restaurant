@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Filipe Moreira, Kevin Darby, Hong Lin" />
+    <title>Booking | Los Pollos Hermanos</title>
+
+    <!-- CSS Libraries -->
+    
+
+    <link rel="stylesheet" href="css/coupons.css">
+    <link rel="icon" href="images/Los_Pollos_Hermanos_logo.png" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Frijole&family=Lemon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Frijole&family=Lemon&family=Special+Elite&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/Los_Pollos_Hermanos_logo.png" alt="Logo of Los Pollos Hermanos" />
+        <h1>Fast-food restaurant</h1>
+        <nav>
+            <h2><a href="index.html">Home</a></h2>
+            <h2><a href="check-menu.html">Menu</a></h2>
+            <h2><a href="promotions.html">Promotions</a></h2>
+            <h2><a href="booking.html">Booking</a></h2>
+            <h2><a href="contact-us.html">Contact Us</a></h2>
+            <h2><a href="delivery.html">Delivery</a></h2>
+            <h2><a href="coupons.html">Coupons</a></h2>
+<!--             <h2><a href="booking-fr.html">FR</a></h2>-->
+        </nav>
+    </header>
+
+    <!-- Start booking section -->
+    <main class="booking">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="booking-content">
+                    </div>
+                </div>
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <img src="images/coupon1.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/coupon2.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/coupon3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="images/coupon4.png" style="width:100%">
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- same content with index -->
+    <div id="appdownloadleft">
+        <a href="https://www.apple.com/ca/app-store/"><img id="appstore" src="images/App-Store-resized.jpg"
+                alt="Download our app on App Store" /></a>
+    </div>
+    <div id="appdownloadright">
+        <a href="https://play.google.com/"><img id="googleplay" src="images/Google-Play-resized.png"
+                alt="Download our app on Google Play" /></a>
+    </div>
+
+    <footer>
+        <h2>About Us</h2>
+        <h2>Privacy Policy</h2>
+        <h2>Terms &amp; Conditions</h2>
+        <h2>FAQs</h2>
+        <h2>Delivery</h2>
+        <h3>&copy;2021 Los Pollos Hermanos'. All Rights Reserved.</h3>
+    </footer>
+
+    <script defer>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+
+</html>

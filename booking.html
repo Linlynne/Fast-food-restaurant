@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content=" Hong Lin, Filipe Moreira,  Kevin Darby, " />
+
+    <title>Booking | Los Pollos Hermanos</title>
+
+       <!-- CSS Libraries -->
+       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+       
+    
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="icon" href="images/Los_Pollos_Hermanos_logo.png" />
+    
+    
+    <script  src="scripts/booking.js"></script>
+    <script>
+        
+        window.addEventListener('load', startup);
+
+    </script>
+</head>
+<!-- body onload="startup();" -->
+<body>
+    <form name="booking" id="booking"  action="delivery.html"
+    onsubmit="return validateForm();" onreset="location.reload();" >
+    <div class ="div" >
+    <header>
+        <img src="images/Los_Pollos_Hermanos_logo.png" alt="Logo of Los Pollos Hermanos" />
+        <h1 onmouseover="style.color='yellow'"
+        onmouseout="style.color='black'">Fast-food restaurant</h1>
+        <nav>
+            <h2><a href="index.html" 
+                >Home</a></h2>
+            <h2><a href="check-menu.html" 
+                >Menu</a></h2>
+            <h2><a href="promotions.html" 
+                >Promotions</a></h2>
+            <h2><a href="booking.html" 
+                >Booking</a></h2>
+               
+                    <h2><a href="contact-us.html" 
+                        >Contact Us</a></h2> 
+                        <h2><a href="delivery.html" 
+                            >Delivery</a></h2>   
+            <h2><a href="coupons.html" 
+                 >Coupon</a></h2>
+        </nav>
+    </header>
+    
+    <main><div id = "div3">
+        <div class = "div1">
+            
+    <article>
+    <figure>
+
+    <span id ="pic1"><img id = "img3" src= "images/dri1.jpg " alt="food" width="500" height="300" > </span>
+     <h4><a href= "breakfast-menu.html">Breakfast</a></h4>
+
+    <span ><img id = "img1" alt="food" src="images/img5.jpg" width="500" height="300"  > </span> <h4><a href= "lunch-menu.html">Lunch</a></h4>
+
+    <span> <img id = "img2" src="images/img10.jpg" alt="food" width="500" height="300" ></span> <h4><a href="dinner-menu.html">Dinner</a></h4>
+
+    <span> <img id ="img4" src="images/pro3.PNG" alt="food" width="500" height="300"> </span> <h4><a href= "promotions.html">Promotions</a></h4>
+
+</figure></article>
+</div>
+
+<div class= "div2">
+    <article>
+    <div class ="area">
+        <div class="clock">
+           <div class="hand hour"></div> 
+           <div class="hand minute"></div> 
+           <div class="hand second"></div> 
+    
+    
+           <div class="number number1">&#8544</div>
+           <div class="number number2">&#8545</div>
+           <div class="number number3">&#8546</div>
+           <div class="number number4">&#8547</div>
+           <div class="number number5">&#8548</div>
+           <div class="number number6">&#8549</div>
+           <div class="number number7">&#8550</div>
+           <div class="number number8">&#8551</div>
+           <div class="number number9">&#8552</div>
+           <div class="number number10">&#8553</div>
+           <div class="number number11">&#8554</div>
+           <div class="number number12">&#8555</div>
+    
+        </div>
+    </div></article>
+    <article>
+      <div class ="order">  
+          
+    <h3>Order </h3>
+    <p id="datep">
+        <input class="text" id="txtDateNow" name="txtDateNow" size="11" value= "mm/dd/yyyy" readonly="readonly" onfocus="myFunction(this)" />
+    </p>
+    <fieldset>
+        <legend>Select  Products</legend>
+
+        <table>
+            <tr>
+                <td class="labelcell">Breakfast</td>
+                <td class="inputcell">
+                    
+                        <select name="prod2" id="prod2" onchange="calculatePrice1();" onfocus="myFunction(this)">
+                        
+                        <option value="0">Drinks</option>
+                        <option value="5.00">special Mocha($5.00)</option>
+                        <option value="5.00">Medium Nestea($$5.00)</option>
+                        <option value="5.00">Medium Coffee($$5.00)</option>
+                        <option value="6.00">Medium Hot chocolate($6.00)</option>
+                        <option value="6.00">Chocolate Milk ($6.00)</option>
+                        
+                    </select>
+
+                    
+                        <select name="qty2" id="qty2" onchange="calculatePrice2();" onfocus="myFunction(this)">
+                         
+                        <option value="0">Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+             
+                <td class="outcell">
+                    <input class="num" name="txtPrice2" id="txtPrice2" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)"/>
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="labelcell">Lunch</td>
+                <td class="inputcell">
+                    
+                        <select name="prod" id= "prod" onchange="calculatePrice();" onfocus="myFunction(this)" >
+                        
+                        <option value="0"> Burgers</option>
+                        <option value="9.00">Cheeseburger($9.00)</option>
+                        <option value="11.00">Double Cheeseburger($11.00)</option>
+                        <option value="13.00">Bacon and Egg Cheeseburger($13.00)</option>
+                        <option value="18.00">Double BBQ and Bacon Burger($18.00)</option>
+                        <option value="5.50">Junior chicken Burger ($22.00)</option>
+                        
+                    </select>
+
+                    
+                        <select name="qty" id="qty" onchange="calculatePrice();" onfocus= "myFunction(this)" >
+                            
+                        <option value="0">Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+             
+                <td class="outcell">
+                    <input class="num" name="txtPrice" id="txtPrice" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)" />
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="labelcell">Dinner</td>
+                <td class="inputcell">
+                    
+                        <select name="prod1" id="prod1" onchange="calculatePrice1();" onfocus="myFunction(this)" >
+                        
+                        <option value="0"> sides</option>
+                        <option value="12.00">Popcorn Chicken($12.00)</option>
+                        <option value="13.00">Spicy Popcorn Chicken($13.00)</option>
+                        <option value="15.00">Poutine($15.00)</option>
+                        <option value="12.00">Medium Fries($12.00)</option>
+                        <option value="22.00">Chicken Wings ($22.00)</option>
+                        
+                    </select>
+
+                    
+                        <select name="qty1" id="qty1" onchange="calculatePrice1();" onfocus="myFunction(this)"  >
+                         
+                        <option value="0">Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+             
+                <td class="outcell">
+                    <input class="num" name="txtPrice1" id="txtPrice1" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)" />
+                </td>
+                
+            </tr>
+           
+            <tr>
+                <td class="labelcell">Promotions</td>
+                <td class="inputcell">
+                    
+                        <select name="prod3" id="prod3" onchange="calculatePrice3();" onfocus="myFunction(this)" >
+                        
+                        <option value="0">Promotions</option>
+                        <option value="7.99">Vegan burger($7.99)</option>
+                        <option value="1.00">Ice Coffee($1.00)</option>
+                        <option value="1.00">Ice Tea($1.00)</option>
+                        <option value="1.00">Coca($1.00)</option>
+                        <option value="1.00">Juice ($1.00)</option>
+                        
+                    </select>
+
+                    
+                        <select name="qty3" id="qty3" onchange="calculatePrice3();" onfocus="myFunction(this)" >
+                         
+                        <option value="0">Quantity</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+             
+                <td class="outcell">
+                    <input class="num" name="txtPrice3" id="txtPrice3" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)" />
+                </td>
+                
+            </tr>
+            <tr>
+                <td class="labelcell">Shipping</td>
+                <td>
+                       <p> <input type="radio" name="optShipType" id="ship1" value="8.00" onclick="calculateShipping(this);" onfocus="myFunction(this)"/>
+                        <label for="ship1">30mins(10km): $8.00</label><br>
+                        <input type="radio" name="optShipType" id="ship2" value="13.00" onclick="calculateShipping(this);" onfocus="myFunction(this)"/>
+                        <label for="ship2">45mins(20km): $13.00</label><br>
+                        <input type="radio" name="optShipType" id="ship3" value="0.00" onclick="calculateShipping(this);" onfocus="myFunction(this)"/>   
+                <label for="ship3">Pick Up Free: $0.00</label></p>
+                 </td>
+                <td class="outcell">
+                    <input class="num" name="txtShipMethod" id="txtShipMethod" size="7" value="none" readonly="readonly" onfocus="myFunction(this)"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="labelcell2">Subtotal</td>
+                <td class="outcell">
+                    <input class="num" name="txtSubtotal" id="txtSubtotal" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="labelcell2">Tax (5%)</td>
+                <td class="outcell">
+                    <input class="num" name="txtTax" id="txtTax" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="labelcell2">TOTAL</td>
+                <td class="outcell">
+                    <input class="num" name="txtTotal" id="txtTotal" size="7" value="0.00" readonly="readonly" onfocus="myFunction(this)" />
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+    
+    <br><br>
+    <p id="formbuttons">
+        <input type="reset" name="btnCancel" id="btnCancel" value="Cancel" onfocus="myFunction(this)" />
+        <input type="submit" name="btnNext" id="btnNext" value="Next" onfocus="myFunction(this)"/>
+    </p>
+  
+      
+</div></article>
+<article>
+<video width="450" height="300" preload="metadata" controls autoplay loop >
+    <source src="video/pexels-morena-vw-6017724(3).mp4" type="video/mp4">
+</video></article>
+
+    </div></div>
+</main>
+<div id="appdownloadleft1">
+    <a href="https://www.apple.com/ca/app-store/"><img id="appstore2" src="images/App-Store-resized.jpg"
+            alt="Download our app on App Store" /></a>
+</div>
+<div id="appdownloadright1">
+    <a href="https://play.google.com/"><img id="googleplay2" src="images/Google-Play-resized.png"
+        alt="Download our app on Google Play" /></a>
+</div>
+<footer>
+    <h2>About Us</h2>
+    <h2>Privacy Policy</h2>
+    <h2>Terms &amp; Conditions</h2>
+    <h2>FAQs</h2>
+    <h2>Delivery</h2>
+    <h3 id ="med">&copy;2021 Los Pollos Hermanos'. All Rights Reserved.</h3>
+</footer>
+
+</div></form>
+
+<script src="scripts/booking.js"></script>
+<script>
+    setInterval(setClock, 1000);
+    
+    const hourHand = document.querySelector('.hour');
+    const minuteHand = document.querySelector('.minute');
+    const secondHand = document.querySelector('.second');
+
+    function setClock() {
+        const currentDate = new Date();
+        const secondsRatio = currentDate.getSeconds() / 60;
+        const minutesRatio = (currentDate.getSeconds() / 60 + currentDate.getMinutes()) / 60;
+        const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
+        setRotation(secondHand, secondsRatio);
+        setRotation(minuteHand, minutesRatio);
+        setRotation(hourHand, hoursRatio);
+    }
+    function setRotation(element, rotationRatio) {
+        element.style.setProperty('--rotation', rotationRatio * 360);
+    }
+    setClock();
+    
+</script>
+</body>
+</html>
